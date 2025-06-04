@@ -15,15 +15,29 @@
     }
     .burger {
       position: relative;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
     }
     .bun-top, .bun-bottom {
-      background: #DEB887;
+      background: linear-gradient(to bottom, #f9d99a, #de9e43);
       width: 300px;
       height: 60px;
       margin: 0 auto;
+      position: relative;
     }
     .bun-top {
       border-radius: 150px 150px 0 0;
+    }
+    .bun-top::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      width: 80%;
+      height: 30px;
+      background-image: radial-gradient(#fff 2px, transparent 2px);
+      background-size: 20px 20px;
+      transform: translateX(-50%);
+      border-radius: inherit;
     }
     .bun-bottom {
       border-radius: 0 0 150px 150px;
@@ -43,6 +57,20 @@
       margin: -10px auto 0;
       border-radius: 20px;
     }
+    .onion {
+      background: #DA70D6;
+      width: 260px;
+      height: 10px;
+      margin: -10px auto 0;
+      border-radius: 20px;
+    }
+    .pickle {
+      background: #9ACD32;
+      width: 260px;
+      height: 10px;
+      margin: -10px auto 0;
+      border-radius: 20px;
+    }
     .cheese {
       background: #FFD700;
       width: 260px;
@@ -57,6 +85,13 @@
       margin: -10px auto 0;
       border-radius: 20px;
     }
+    .bacon {
+      background: #D2691E;
+      width: 260px;
+      height: 15px;
+      margin: -10px auto 0;
+      border-radius: 20px;
+    }
   </style>
 </head>
 <body>
@@ -64,8 +99,11 @@
     <div class="bun-top"></div>
     <div class="lettuce"></div>
     <div class="tomato"></div>
+    <div class="onion"></div>
+    <div class="pickle"></div>
     <div class="cheese"></div>
     <div class="patty"></div>
+    <div class="bacon"></div>
     <div class="bun-bottom"></div>
   </div>
 </body>
